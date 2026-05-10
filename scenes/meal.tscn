@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bum8xxvqud1ck"]
+
+[ext_resource type="Texture2D" uid="uid://b8qacjolbvs3k" path="res://assets/Untitled_Artwork 218.png" id="2_g30cd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2cdfm"]
+size = Vector2(413, 432.25)
+
+[node name="meal" type="Area2D" groups=["meal", "player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, -78.875)
+shape = SubResource("RectangleShape2D_2cdfm")
+
+[node name="UntitledArtwork218" type="Sprite2D" parent="."]
+position = Vector2(9.536743e-07, -91)
+rotation = 1.5707964
+scale = Vector2(0.12578386, 0.12578386)
+texture = ExtResource("2_g30cd")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

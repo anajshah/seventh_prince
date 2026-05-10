@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dvcfvm021qm5d"]
+[gd_scene load_steps=9 format=3 uid="uid://dvcfvm021qm5d"]
 
 [ext_resource type="PackedScene" uid="uid://cv5riq8vpt0dl" path="res://scenes/player.tscn" id="1_ioskq"]
 [ext_resource type="Texture2D" uid="uid://car348pm7xamo" path="res://assets/Untitled_Artwork 212.png" id="1_yjqpq"]
 [ext_resource type="Texture2D" uid="uid://dfqxu33sfvdrx" path="res://assets/Untitled_Artwork 214.png" id="2_4bx60"]
+[ext_resource type="PackedScene" uid="uid://bjth1och26o7v" path="res://scenes/table.tscn" id="3_wfs7u"]
 [ext_resource type="PackedScene" uid="uid://c8oe71x84078e" path="res://scenes/poison_test.tscn" id="4_i2l1n"]
+[ext_resource type="PackedScene" uid="uid://bum8xxvqud1ck" path="res://scenes/meal.tscn" id="6_es01l"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yjqpq"]
 
@@ -52,6 +54,13 @@ shape = SubResource("WorldBoundaryShape2D_yjqpq")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-1827, 177)
 shape = SubResource("WorldBoundaryShape2D_i2l1n")
+
+[node name="table" parent="StaticBody2D" instance=ExtResource("3_wfs7u")]
+position = Vector2(1640.0001, 37)
+scale = Vector2(1.5, 1.5)
+
+[node name="meal" parent="." instance=ExtResource("6_es01l")]
+position = Vector2(1959, -227)
 
 [node name="Player" parent="." instance=ExtResource("1_ioskq")]
 position = Vector2(-1, -55)

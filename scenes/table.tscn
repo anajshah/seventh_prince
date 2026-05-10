@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjth1och26o7v"]
+
+[ext_resource type="Texture2D" uid="uid://b0dufdljt1o20" path="res://assets/Untitled_Artwork 219.png" id="1_jd0nb"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_v5i0k"]
+a = Vector2(393, -181)
+b = Vector2(-361, -182)
+
+[node name="table" type="StaticBody2D"]
+
+[node name="UntitledArtwork219" type="Sprite2D" parent="."]
+position = Vector2(9.999996, -145)
+rotation = 1.5707964
+scale = Vector2(0.3730238, 0.3730238)
+texture = ExtResource("1_jd0nb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 10)
+shape = SubResource("SegmentShape2D_v5i0k")
+one_way_collision = true
