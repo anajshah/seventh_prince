@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://q8lmub25fgt1"]
+[gd_scene load_steps=2 format=3 uid="uid://q8lmub25fgt1"]
+
+[ext_resource type="Texture2D" uid="uid://d3df5ogrub2pr" path="res://assets/Screenshot 2026-05-09 at 2.02.38 PM.png" id="1_or254"]
 
 [node name="guide" type="Node2D"]
+
+[node name="Screenshot20260509At2_02_38Pm" type="Sprite2D" parent="."]
+position = Vector2(573, 383)
+scale = Vector2(3.1157894, 3.2047243)
+texture = ExtResource("1_or254")

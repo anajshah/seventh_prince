@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dngx34lh2aen3"
-path="res://.godot/imported/Royalty Free.ttf-182d6ff46983c15f02ef52e64a11c5fc.fontdata"
+uid="uid://dk13ldq2s32wq"
+path="res://.godot/imported/Royalty Free.otf-bad92e780ca3b2b1a7be3e2d2697b69d.fontdata"
 
 [deps]
 
-source_file="res://assets/royalty-free/Royalty Free.ttf"
-dest_files=["res://.godot/imported/Royalty Free.ttf-182d6ff46983c15f02ef52e64a11c5fc.fontdata"]
+source_file="res://font/Royalty Free.otf"
+dest_files=["res://.godot/imported/Royalty Free.otf-bad92e780ca3b2b1a7be3e2d2697b69d.fontdata"]
 
 [params]
 
