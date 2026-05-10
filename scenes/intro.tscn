@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dvcfvm021qm5d"]
+[gd_scene load_steps=11 format=3 uid="uid://dvcfvm021qm5d"]
 
 [ext_resource type="PackedScene" uid="uid://cv5riq8vpt0dl" path="res://scenes/player.tscn" id="1_ioskq"]
 [ext_resource type="Texture2D" uid="uid://car348pm7xamo" path="res://assets/Untitled_Artwork 212.png" id="1_yjqpq"]
@@ -6,45 +6,57 @@
 [ext_resource type="PackedScene" uid="uid://bjth1och26o7v" path="res://scenes/table.tscn" id="3_wfs7u"]
 [ext_resource type="PackedScene" uid="uid://c8oe71x84078e" path="res://scenes/poison_test.tscn" id="4_i2l1n"]
 [ext_resource type="PackedScene" uid="uid://bum8xxvqud1ck" path="res://scenes/meal.tscn" id="6_es01l"]
+[ext_resource type="PackedScene" uid="uid://cdvgx3d0vxt26" path="res://scenes/gaurd.tscn" id="7_0naf5"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yjqpq"]
+distance = -8.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_i2l1n"]
 normal = Vector2(1, 0)
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_es01l"]
+normal = Vector2(-0.9998934, -0.014596985)
+distance = -1.0
+
 [node name="intro" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Background_floor" type="Node" parent="."]
 
 [node name="UntitledArtwork215" type="Sprite2D" parent="Background_floor"]
 z_index = -1
-position = Vector2(796.6841, -438)
+position = Vector2(-203.316, -438)
 scale = Vector2(0.7661291, 0.766129)
 texture = ExtResource("1_yjqpq")
 
 [node name="UntitledArtwork214" type="Sprite2D" parent="Background_floor"]
 z_index = -1
-position = Vector2(-947.31586, -439)
+position = Vector2(-1947.316, -439)
 scale = Vector2(0.7755376, 0.7755376)
 texture = ExtResource("1_yjqpq")
 
 [node name="UntitledArtwork213" type="Sprite2D" parent="Background_floor"]
 z_index = -1
-position = Vector2(2513.684, -445)
+position = Vector2(1513.684, -445)
 scale = Vector2(0.7587366, 0.75873655)
 texture = ExtResource("1_yjqpq")
 
 [node name="UntitledArtwork212" type="Sprite2D" parent="Background_floor"]
 z_index = -1
-position = Vector2(4221, -451.99997)
+position = Vector2(3221, -452)
 scale = Vector2(0.7516801, 0.75167996)
 texture = ExtResource("1_yjqpq")
 
 [node name="UntitledArtwork216" type="Sprite2D" parent="Background_floor"]
 z_index = -1
-position = Vector2(1884.9999, 75)
-scale = Vector2(6.1875005, 0.51875)
+position = Vector2(625.24963, 75)
+scale = Vector2(5.7545834, 0.51875)
 texture = ExtResource("2_4bx60")
+
+[node name="table" parent="." instance=ExtResource("3_wfs7u")]
+position = Vector2(1640.0001, 37)
+scale = Vector2(1.5, 1.5)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -52,12 +64,12 @@ texture = ExtResource("2_4bx60")
 shape = SubResource("WorldBoundaryShape2D_yjqpq")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-1827, 177)
+position = Vector2(-1955, 254)
 shape = SubResource("WorldBoundaryShape2D_i2l1n")
 
-[node name="table" parent="StaticBody2D" instance=ExtResource("3_wfs7u")]
-position = Vector2(1640.0001, 37)
-scale = Vector2(1.5, 1.5)
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(3317, 445)
+shape = SubResource("WorldBoundaryShape2D_es01l")
 
 [node name="meal" parent="." instance=ExtResource("6_es01l")]
 position = Vector2(1959, -227)
@@ -71,5 +83,8 @@ zoom = Vector2(0.7, 0.7)
 position_smoothing_enabled = true
 
 [node name="poison_test" parent="." instance=ExtResource("4_i2l1n")]
-position = Vector2(379, -244)
+position = Vector2(-1064, -314)
 scale = Vector2(3, 3)
+
+[node name="Gaurd" parent="." instance=ExtResource("7_0naf5")]
+position = Vector2(641, -18)
