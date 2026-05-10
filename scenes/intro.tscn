@@ -87,4 +87,16 @@ position = Vector2(-1064, -314)
 scale = Vector2(3, 3)
 
 [node name="Gaurd" parent="." instance=ExtResource("7_0naf5")]
-position = Vector2(641, -18)
+position = Vector2(630, 55)
+
+[node name="Gaurd2" parent="." instance=ExtResource("7_0naf5")]
+position = Vector2(2488, 46)
+
+[node name="Gaurd5" parent="." instance=ExtResource("7_0naf5")]
+position = Vector2(6394, 21)
+
+[node name="Gaurd3" parent="." instance=ExtResource("7_0naf5")]
+position = Vector2(3870, 25)
+
+[node name="Gaurd4" parent="." instance=ExtResource("7_0naf5")]
+position = Vector2(5155, 2)

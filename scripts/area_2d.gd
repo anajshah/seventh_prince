@@ -17,6 +17,7 @@ func _process(_delta):
 			if area.is_in_group("meal"):
 				Global.meal_is_poisoned = true 
 				print("meal poisoned")
+				get_tree().change_scene_to_file("res://scenes/win.tscn")
 				get_parent().visible = false
 				being_held = false
 				set_process(false)
@@ -28,11 +29,11 @@ func check_guard_collision():
 	var areas = get_overlapping_areas()
 	for area in areas:
 		if area.is_in_group("gaurd") and being_held:
-			get_tree().change_scene_to_file("res://scenes/intro.tscn")
+			get_tree().change_scene_to_file("res://scenes/caught.tscn")
 
 func _on_area_entered(area):
 	if area.is_in_group("gaurd") and being_held:
-		get_tree().change_scene_to_file("res://scenes/intro.tscn")
+		get_tree().change_scene_to_file("res://scenes/caught.tscn")
 
 func _on_body_entered(body):
 	if body.is_in_group("player"):
