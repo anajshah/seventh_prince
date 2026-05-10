@@ -43,6 +43,8 @@ func _on_body_exited(body):
 	if body == current_body:
 		current_body = null
 
+
+
 #var current_body = null
 #var being_held = false
 

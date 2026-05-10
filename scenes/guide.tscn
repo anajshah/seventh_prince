@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://q8lmub25fgt1"]
+[gd_scene load_steps=7 format=3 uid="uid://q8lmub25fgt1"]
 
 [ext_resource type="Texture2D" uid="uid://crga7xubhphsf" path="res://assets/Screenshot 2026-05-09 at 2.02.38 PM.png" id="1_or254"]
+[ext_resource type="FontFile" uid="uid://dk13ldq2s32wq" path="res://font/Royalty Free.otf" id="2_0el4p"]
+[ext_resource type="FontFile" uid="uid://dngx34lh2aen3" path="res://font/Royalty Free.ttf" id="2_fd7ko"]
+[ext_resource type="Texture2D" uid="uid://7xaei31c44ex" path="res://assets/Untitled_Artwork 215.png" id="4_nhlb8"]
+[ext_resource type="Texture2D" uid="uid://cuoiad22pinab" path="res://assets/Untitled_Artwork 206.png" id="5_law3w"]
+[ext_resource type="Script" uid="uid://diwg83ki48jq3" path="res://scenes/button.gd" id="6_nhlb8"]
 
 [node name="guide" type="Node2D"]
 
@@ -8,3 +13,57 @@
 position = Vector2(573, 383)
 scale = Vector2(3.1157894, 3.2047243)
 texture = ExtResource("1_or254")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 39.0
+offset_top = 171.0
+offset_right = 1122.0
+offset_bottom = 666.0
+theme_override_colors/font_color = Color(0.2627451, 0.20392157, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("2_fd7ko")
+theme_override_font_sizes/font_size = 120
+text = "How do you move?"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 53.0
+offset_top = 25.0
+offset_right = 817.0
+offset_bottom = 308.0
+theme_override_colors/font_color = Color(0.2639939, 0.20503263, 0.24255346, 1)
+theme_override_fonts/font = ExtResource("2_0el4p")
+theme_override_font_sizes/font_size = 150
+text = "Guide"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 44.0
+offset_top = 300.0
+offset_right = 1141.0
+offset_bottom = 718.0
+theme_override_colors/font_color = Color(0.2627451, 0.20392157, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("2_fd7ko")
+theme_override_font_sizes/font_size = 80
+text = "-Use the arrow keys to move 
+around
+-Use the space bar to hold items"
+
+[node name="UntitledArtwork215" type="Sprite2D" parent="."]
+position = Vector2(570, 720.99994)
+rotation = 1.5707964
+scale = Vector2(0.33685425, 1)
+texture = ExtResource("4_nhlb8")
+
+[node name="UntitledArtwork206" type="Sprite2D" parent="."]
+position = Vector2(1025, 406)
+scale = Vector2(0.44758064, 0.44758064)
+texture = ExtResource("5_law3w")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 538.0
+offset_top = 568.0
+offset_right = 870.0
+offset_bottom = 665.0
+theme_override_font_sizes/font_size = 40
+text = "Go back home"
+script = ExtResource("6_nhlb8")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
