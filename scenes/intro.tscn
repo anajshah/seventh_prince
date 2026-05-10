@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dvcfvm021qm5d"]
+[gd_scene load_steps=12 format=3 uid="uid://dvcfvm021qm5d"]
 
 [ext_resource type="PackedScene" uid="uid://cv5riq8vpt0dl" path="res://scenes/player.tscn" id="1_ioskq"]
 [ext_resource type="Texture2D" uid="uid://car348pm7xamo" path="res://assets/Untitled_Artwork 212.png" id="1_yjqpq"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c8oe71x84078e" path="res://scenes/poison_test.tscn" id="4_i2l1n"]
 [ext_resource type="PackedScene" uid="uid://bum8xxvqud1ck" path="res://scenes/meal.tscn" id="6_es01l"]
 [ext_resource type="PackedScene" uid="uid://cdvgx3d0vxt26" path="res://scenes/gaurd.tscn" id="7_0naf5"]
+[ext_resource type="PackedScene" uid="uid://c6hyfec0bdtn2" path="res://scenes/canvas_layer.tscn" id="8_bu1yb"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yjqpq"]
 distance = -8.0
@@ -19,8 +20,6 @@ normal = Vector2(-0.9998934, -0.014596985)
 distance = -1.0
 
 [node name="intro" type="Node2D"]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Background_floor" type="Node" parent="."]
 
@@ -86,17 +85,51 @@ position_smoothing_enabled = true
 position = Vector2(-1064, -314)
 scale = Vector2(3, 3)
 
-[node name="Gaurd" parent="." instance=ExtResource("7_0naf5")]
+[node name="gaurds" type="Node" parent="."]
+
+[node name="Gaurd" parent="gaurds" instance=ExtResource("7_0naf5")]
 position = Vector2(630, 55)
 
-[node name="Gaurd2" parent="." instance=ExtResource("7_0naf5")]
+[node name="Gaurd2" parent="gaurds" instance=ExtResource("7_0naf5")]
 position = Vector2(2488, 46)
 
-[node name="Gaurd5" parent="." instance=ExtResource("7_0naf5")]
+[node name="Gaurd5" parent="gaurds" instance=ExtResource("7_0naf5")]
 position = Vector2(6394, 21)
 
-[node name="Gaurd3" parent="." instance=ExtResource("7_0naf5")]
+[node name="Gaurd3" parent="gaurds" instance=ExtResource("7_0naf5")]
 position = Vector2(3870, 25)
 
-[node name="Gaurd4" parent="." instance=ExtResource("7_0naf5")]
+[node name="Gaurd4" parent="gaurds" instance=ExtResource("7_0naf5")]
 position = Vector2(5155, 2)
+
+[node name="Gaurd6" parent="gaurds" instance=ExtResource("7_0naf5")]
+position = Vector2(7567, -10)
+
+[node name="Gaurd7" parent="gaurds" instance=ExtResource("7_0naf5")]
+position = Vector2(9425, -19)
+
+[node name="Gaurd8" parent="gaurds" instance=ExtResource("7_0naf5")]
+position = Vector2(13331, -44)
+
+[node name="Gaurd9" parent="gaurds" instance=ExtResource("7_0naf5")]
+position = Vector2(10807, -40)
+
+[node name="Gaurd10" parent="gaurds" instance=ExtResource("7_0naf5")]
+position = Vector2(12092, -63)
+
+[node name="Gaurd11" parent="gaurds" instance=ExtResource("7_0naf5")]
+position = Vector2(14588, -29)
+
+[node name="Gaurd12" parent="gaurds" instance=ExtResource("7_0naf5")]
+position = Vector2(16446, -38)
+
+[node name="Gaurd13" parent="gaurds" instance=ExtResource("7_0naf5")]
+position = Vector2(20352, -63)
+
+[node name="Gaurd14" parent="gaurds" instance=ExtResource("7_0naf5")]
+position = Vector2(17828, -59)
+
+[node name="Gaurd15" parent="gaurds" instance=ExtResource("7_0naf5")]
+position = Vector2(19113, -82)
+
+[node name="CanvasLayer2" parent="." instance=ExtResource("8_bu1yb")]

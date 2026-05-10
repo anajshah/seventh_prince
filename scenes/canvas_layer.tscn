@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://c6hyfec0bdtn2"]
+
+[ext_resource type="Script" uid="uid://b17sbvud78fgm" path="res://scripts/nine_patch_rect.gd" id="1_c4rma"]
+[ext_resource type="Texture2D" uid="uid://b2j2wbcf7tn7e" path="res://assets/Untitled presentation.png" id="1_ghj5q"]
+[ext_resource type="Texture2D" uid="uid://b7x5ljg8xgy3o" path="res://assets/Untitled_Artwork 227.png" id="3_kfwc7"]
+[ext_resource type="Texture2D" uid="uid://daku4hnscla81" path="res://assets/Untitled_Artwork 226.png" id="4_4a2ha"]
+[ext_resource type="Texture2D" uid="uid://cnruk73hfddgo" path="res://assets/Untitled_Artwork 225.png" id="5_g6s7q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jtalx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_kfwc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4a2ha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g6s7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4a2ha")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_left = 59.0
+offset_top = 494.0
+offset_right = 1018.0
+offset_bottom = 723.0
+texture = ExtResource("1_ghj5q")
+script = ExtResource("1_c4rma")
+
+[node name="Label" type="Label" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 30.0
+offset_right = 845.0
+offset_bottom = 205.0
+theme_override_font_sizes/font_size = 48
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NinePatchRect"]
+position = Vector2(79, -0.99998474)
+rotation = -0.19557188
+scale = Vector2(0.10553662, 0.10553662)
+sprite_frames = SubResource("SpriteFrames_jtalx")
+autoplay = "default"
