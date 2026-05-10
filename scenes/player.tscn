@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cv5riq8vpt0dl"]
+[gd_scene load_steps=6 format=3 uid="uid://cv5riq8vpt0dl"]
 
 [ext_resource type="Script" uid="uid://lyut1qwtewki" path="res://player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://cuoiad22pinab" path="res://assets/Untitled_Artwork 206.png" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://dj7fanu6ojxgm" path="res://assets/Untitled_Artwork 207.png" id="3_qhqgy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dqkch"]
 animations = [{
@@ -10,7 +11,15 @@ animations = [{
 "texture": ExtResource("2_qhqgy")
 }],
 "loop": true,
-"name": &"default",
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qhqgy")
+}],
+"loop": true,
+"name": &"right",
 "speed": 5.0
 }]
 
@@ -25,6 +34,7 @@ script = ExtResource("1_g2els")
 position = Vector2(0, -256)
 scale = Vector2(0.3266129, 0.32661292)
 sprite_frames = SubResource("SpriteFrames_dqkch")
+animation = &"right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, -245)

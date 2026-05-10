@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://q8lmub25fgt1"]
 
-[ext_resource type="Texture2D" uid="uid://d3df5ogrub2pr" path="res://assets/Screenshot 2026-05-09 at 2.02.38 PM.png" id="1_or254"]
+[ext_resource type="Texture2D" path="res://assets/Screenshot 2026-05-09 at 2.02.38 PM.png" id="1_or254"]
 
 [node name="guide" type="Node2D"]
 

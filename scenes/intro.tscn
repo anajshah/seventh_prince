@@ -1,10 +1,44 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvcfvm021qm5d"]
+[gd_scene load_steps=5 format=3 uid="uid://dvcfvm021qm5d"]
 
 [ext_resource type="PackedScene" uid="uid://cv5riq8vpt0dl" path="res://scenes/player.tscn" id="1_ioskq"]
+[ext_resource type="Texture2D" uid="uid://car348pm7xamo" path="res://assets/Untitled_Artwork 212.png" id="1_yjqpq"]
+[ext_resource type="Texture2D" uid="uid://dfqxu33sfvdrx" path="res://assets/Untitled_Artwork 214.png" id="2_4bx60"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yjqpq"]
 
 [node name="intro" type="Node2D"]
+
+[node name="Background_floor" type="Node" parent="."]
+
+[node name="UntitledArtwork215" type="Sprite2D" parent="Background_floor"]
+z_index = -1
+position = Vector2(796.6841, -438)
+scale = Vector2(0.7661291, 0.766129)
+texture = ExtResource("1_yjqpq")
+
+[node name="UntitledArtwork214" type="Sprite2D" parent="Background_floor"]
+z_index = -1
+position = Vector2(-947.31586, -439)
+scale = Vector2(0.7755376, 0.7755376)
+texture = ExtResource("1_yjqpq")
+
+[node name="UntitledArtwork213" type="Sprite2D" parent="Background_floor"]
+z_index = -1
+position = Vector2(2513.684, -445)
+scale = Vector2(0.7587366, 0.75873655)
+texture = ExtResource("1_yjqpq")
+
+[node name="UntitledArtwork212" type="Sprite2D" parent="Background_floor"]
+z_index = -1
+position = Vector2(4220.6846, -446.99997)
+scale = Vector2(0.7516801, 0.75167996)
+texture = ExtResource("1_yjqpq")
+
+[node name="UntitledArtwork216" type="Sprite2D" parent="Background_floor"]
+z_index = -1
+position = Vector2(1885, 75.25)
+scale = Vector2(6.1875005, 0.51875)
+texture = ExtResource("2_4bx60")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
